@@ -1,0 +1,129 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Round_1_internship": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/round-1-internship",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/images/xhero_img.png.pagespeed.ic.QfDZpgkCP_.png",
+              "src/assets/images/xbg_1.jpg.pagespeed.ic.xDcxduUvof.jpg",
+              "src/assets/assets/images/xbg_2.jpg.pagespeed.ic.IgleDfW2cR.jpg",
+              "src/assets/images/xbg_3.jpg.pagespeed.ic.4GrvPWazRF.jpg",
+              "src/assets/images/xgal_1.jpg.pagespeed.ic.G-dX9oAARj.jpg",
+              "src/assets/images/xgal_2.jpg.pagespeed.ic.tUeyfivkMM.jpg",
+              "src/assets/images/xgal_3.jpg.pagespeed.ic.AlxMk_UblV.jpg",
+              "src/assets/images/xgal_4.jpg.pagespeed.ic.ormtOt5XWn.jpg",
+              "src/assets/images/xgal_5.jpg.pagespeed.ic.Z6lrfevPGA.jpg",
+              "src/assets/images/xgal_6.jpg.pagespeed.ic.bh_E0CfYw-.jpg",
+              "src/assets/images/xperson_1.jpg.pagespeed.ic.ZwOrrtC1mu.jpg",
+              "src/assets/images/xperson_2.jpg.pagespeed.ic.XM6hUW5Ree.jpg",
+              "src/assets/images/xperson_3.jpg.pagespeed.ic.lDvMvr9fE5.jpg",
+              "src/assets/images/xperson_4.jpg.pagespeed.ic.XWIFzJRyzR.jpg",
+              "src/assets/images/slant.svg",
+              "src/assets/css/owl.video.play.html",
+              "src/assets/image/gojo 2.0.jpg",
+              "src/assets/image/gojo saturo.jpg",
+              "src/assets/image/hahahahhahahahhaha.webp",
+              "src/assets/image/wallpaperflare.com_wallpaper (1).jpg"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/assets/js/jquery-3.4.1.min.js",
+              "src/assets/js/jquery.fancybox.min.js+aos.js+custom.js.pagespeed.jc.GGtpGK0uAZ.js",
+              "src/assets/js/owl.carousel.min.js+aos.js+jquery.animateNumber.min.js+jquery.waypoints.min.js.pagespeed.jc.RH15G7UVeO.js",
+              "src/assets/js/popper.min.js+bootstrap.min.js.pagespeed.jc.8YEcV5Mp_F.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "Round_1_internship:build:production"
+            },
+            "development": {
+              "browserTarget": "Round_1_internship:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "Round_1_internship:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
